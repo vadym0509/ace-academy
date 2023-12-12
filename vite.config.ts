@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "dist" // tells vite to output the build to a folder called docs
   },
-  base: './'
+  base: '/'
 })

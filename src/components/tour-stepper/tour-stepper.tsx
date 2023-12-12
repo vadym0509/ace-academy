@@ -29,7 +29,7 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
                     {stepComponents[currentStep]}
                 </div>
                 <div className="mt-16 flex justify-center gap-2">
-                    <Button disabled={currentStep === 0} onClick={handlePrevStep} label={currentStep === 0 ? "Send again" : "Continue"} />
+                    <Button disabled={currentStep === 0} onClick={handlePrevStep} label={currentStep === 0 ? "Send again" : "Go back"} />
                     <Button disabled={currentStep === stepsCount - 1} onClick={handleNextStep} label="Continue" type="primary" />
                 </div>
             </div>

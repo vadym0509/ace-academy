@@ -7,6 +7,7 @@ import OverView from '../pages/overview'
 const Router = () => {
     return (
         <Routes>
+            <Route path="/" element={<OverView />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/new-password" element={<NewPassword />} />

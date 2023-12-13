@@ -8,7 +8,9 @@ const AppLayout = ({children}: AppLayoutProps) => {
     return (
         <div>
             <Nav />
-            {children}
+            <div className="mt-25 py-12.5 px-30 bg-tangerine">
+                {children}
+            </div>
         </div>
     )
 }

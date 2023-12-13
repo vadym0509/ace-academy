@@ -24,7 +24,7 @@ const Checkbox = ({className, label}: CheckboxProps) => {
       />
       <label htmlFor="customCheckbox" className="flex items-center cursor-pointer">
         <div className="relative">
-          <div className="w-4 h-4 border border-black rounded-semimd bg-white transition duration-300 ease-in-out">
+          <div className="w-4 h-4 border border-black rounded-1 bg-white transition duration-300 ease-in-out">
             <svg
               className={`w-4 h-4 text-black transform transition-transform ${
                 isChecked ? 'opacity-100 scale-100' : 'opacity-0 scale-0'

@@ -101,7 +101,7 @@ const Step5 = () => {
 const Step6 = () => {
     return (
         <div>
-            <div className="rounded-extralg w-35 h-35 mx-auto bg-tangerine flex justify-center">
+            <div className="rounded-37.5 w-35 h-35 mx-auto bg-tangerine flex justify-center">
                 <span className="m-auto"><IconCongrats /></span>
             </div>
             <div className="mt-8 text-midblack text-center">

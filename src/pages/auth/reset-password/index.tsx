@@ -22,7 +22,7 @@ const ResetPassword = () => {
                 <Button onClick={handleOnClickSendMailButton} className="mt-8 mx-auto w-86" label="Send link to email" type="primary" />
             </div> : 
             <div>
-                <div className="rounded-extralg w-35 h-35 mx-auto bg-tangerine flex justify-center">
+                <div className="rounded-37.5 w-35 h-35 mx-auto bg-tangerine flex justify-center">
                     <span className="m-auto"><IconCheckMark /></span>
                 </div>
                 <div className="mt-8 text-midblack text-center">

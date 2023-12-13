@@ -7,7 +7,7 @@ interface TourStepperProps {
 }
 
 const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
-    const modalClassNames = `p-16 w-131 my-auto justify-center bg-white items-center overflow-x-hidden overflow-y-auto inset-0 z-50 my-auto rounded-2.5xl shadow-custom ${classNames}`;
+    const modalClassNames = `p-16 w-131 my-auto justify-center bg-white items-center overflow-x-hidden overflow-y-auto inset-0 z-50 my-auto rounded-5 shadow-custom ${classNames}`;
     const stepsCount = stepComponents?.length;
     const [currentStep, setCurrentStep] = useState<number>(0)
     const [showTour, setShowTour] = useState<boolean>(true)
@@ -56,7 +56,7 @@ const Stepper = ({ count, currentStep }: StepperProps) => {
     return (
         <div className="flex items-center gap-2">
             {steps.map((step) => (
-                <div key={step} className={`rounded-semilg w-15 h-1.5 ${step <= currentStep ? 'bg-primary-500' : 'bg-tangerine'}`}></div>
+                <div key={step} className={`rounded-7.5 w-15 h-1.5 ${step <= currentStep ? 'bg-primary-500' : 'bg-tangerine'}`}></div>
             ))}
         </div>
     );

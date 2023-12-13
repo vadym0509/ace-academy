@@ -9,6 +9,11 @@ import IconMap from './src/icon-map.tsx'
 import IconToolbox from './src/icon-toolbox.tsx'
 import IconCongrats from './src/icon-congrats.tsx'
 import IconSearch from './src/icon-search.tsx'
+import IconStar from './src/icon-star.tsx'
+import IconWhiteHeart from './src/icon-white-heart.tsx'
+import IconGreyHeart from './src/icon-grey-heart.tsx'
+import IconLeftArrow from './src/icon-left-arrow.tsx'
+import IconRightArrow from './src/icon-right-arrow.tsx'
 
 export {
     IconGoogle,
@@ -21,5 +26,10 @@ export {
     IconMap,
     IconToolbox,
     IconCongrats,
-    IconSearch
+    IconSearch,
+    IconStar,
+    IconWhiteHeart,
+    IconGreyHeart,
+    IconLeftArrow,
+    IconRightArrow
 }

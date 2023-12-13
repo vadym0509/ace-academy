@@ -45,7 +45,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, label, icon, class
       <div className="relative w-full inline-block">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className='p-4.5 w-full bg-tangerine flex gap-4 rounded-semixl'
+          className='p-4.5 w-full bg-tangerine flex gap-4 rounded-2.5'
         >
           {icon && <div className="my-auto">{icon}</div>}
           <span className={`w-full font-bold leading-6 bg-tangerine text-midblack text-left focus:outline-none ${!selectedOption && "text-midgrey"}`}>{selectedOption || placeholder || 'Select an option'}</span>
@@ -56,7 +56,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, label, icon, class
             {options.map((option) => (
               <li
                 key={option}
-                className="cursor-pointer px-4 py-2 text-sm text-midgrey rounded-semixl font-semibold hover:bg-tangerine"
+                className="cursor-pointer px-4 py-2 text-sm text-midgrey rounded-2.5 font-semibold hover:bg-tangerine"
                 onClick={() => handleOptionClick(option)}
               >
                 {option}

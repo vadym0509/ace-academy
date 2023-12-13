@@ -11,7 +11,7 @@ const Nav = () => {
     }, [navigate])
 
     return (
-        <div className="px-24.5 w-full h-24 flex justify-between">
+        <div className="fixed top-0 bg-white z-20 px-32 w-full h-24 flex justify-between">
             <div className="flex my-auto items-center gap-x-22.5">
                 <div className="text-2xl text-midblack font-extrabold cursor-pointer" onClick={gotoHome}>ACE ACADEMY</div>
                 <Input className="w-101" type="rounded" placeholder="Search courses, skills, teachers" icon={<IconSearch />} />

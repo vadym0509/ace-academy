@@ -3,7 +3,7 @@ import IconOutlook from './src/icon-outlook.tsx'
 import IconMail from './src/icon-mail.tsx'
 import IconLock from './src/icon-lock.tsx'
 import IconCheckMark from './src/icon-checkmark.tsx'
-import IconDownArrow from './src/icon-downarrow.tsx'
+import IconDownArrow from './src/icon-down-arrow.tsx'
 import IconDegree from './src/icon-degree.tsx'
 import IconMap from './src/icon-map.tsx'
 import IconToolbox from './src/icon-toolbox.tsx'
@@ -14,6 +14,10 @@ import IconWhiteHeart from './src/icon-white-heart.tsx'
 import IconGreyHeart from './src/icon-grey-heart.tsx'
 import IconLeftArrow from './src/icon-left-arrow.tsx'
 import IconRightArrow from './src/icon-right-arrow.tsx'
+import IconLgDownArrow from './src/icon-down-arrow-lg.tsx'
+import IconSmDownArrow from './src/icon-down-arrow-sm.tsx'
+import IconUpArrow from './src/icon-up-arrow.tsx'
+import IconLanguage from './src/icon-language.tsx'
 
 export {
     IconGoogle,
@@ -31,5 +35,9 @@ export {
     IconWhiteHeart,
     IconGreyHeart,
     IconLeftArrow,
-    IconRightArrow
+    IconRightArrow,
+    IconLgDownArrow,
+    IconUpArrow,
+    IconLanguage,
+    IconSmDownArrow
 }

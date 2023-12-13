@@ -6,14 +6,15 @@ interface ButtonProps {
     onClick?: () => void;
     disabled?: boolean;
     rounded?: boolean;
+    size?: "md" | "lg";
 }
 
-const Button = ({className, type = "default", icon, disabled = false, label, onClick, rounded = false}: ButtonProps) => {
+const Button = ({className, type = "default", icon, disabled = false, label, onClick, rounded = false, size = "lg"}: ButtonProps) => {
     const types = {
         default: `bg-white text-midblack ${!rounded && "hover:border-midgrey hover:bg-tangerine border border-black"}`,
         primary: `bg-primary-500 hover:bg-primary-400 ${rounded ? "text-midblack" : "text-white"} border border-primary-500`
     }
-    let buttonClassName = `px-6.5 h-16 flex ${rounded ? "rounded-15" : "rounded-2.5"} disabled:cursor-not-allowed disabled:bg-disabled-bg disabled:text-disabled-text disabled:border-disabled-text ${types[type]} ${className}`
+    let buttonClassName = `px-6.5 ${size === "lg" ? "h-16" : "h-11"} flex ${rounded ? "rounded-15" : "rounded-2.5"} disabled:cursor-not-allowed disabled:bg-disabled-bg disabled:text-disabled-text disabled:border-disabled-text ${types[type]} ${className}`
     return (
         <button disabled={disabled} onClick={onClick} className={buttonClassName}>
             <div className="w-full flex my-auto">

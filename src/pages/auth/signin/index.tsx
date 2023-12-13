@@ -13,6 +13,10 @@ const SignIn = () => {
         navigate('/reset-password')
     }, [navigate])
 
+    const handleSignIn = useCallback(() => {
+        navigate('/overview')
+    }, [navigate])
+
     return (
         <AuthLayout>
             <div className="text-midblack text-center">
@@ -30,7 +34,7 @@ const SignIn = () => {
                 <Checkbox label="Remember me" />
                 <div onClick={handleForgotPass} className=" hover:underline hover:underline-offset-8 font-medium cursor-pointer">Forgot password?</div>
             </div>
-            <Button className="mt-8 mx-auto w-86" label="Sign in" type="primary" />
+            <Button onClick={handleSignIn} className="mt-8 mx-auto w-86" label="Sign in" type="primary" />
         </AuthLayout>
     )
 }

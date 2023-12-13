@@ -7,6 +7,7 @@ import CardImgMd02 from './src/img-card-md-02.png'
 import CardImgMd03 from './src/img-card-md-03.png'
 import CardImgMd04 from './src/img-card-md-04.png'
 import BannerImg from './src/img-banner.jpg'
+import UserAvatar from './src/user-avatar.png'
 
 export {
     BgSignUp,
@@ -17,5 +18,6 @@ export {
     CardImgMd02,
     CardImgMd03,
     CardImgMd04,
-    BannerImg
+    BannerImg,
+    UserAvatar
 }

@@ -1,5 +1,5 @@
 import { Button } from "../button";
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 interface TourStepperProps {
     classNames? : string;
@@ -11,6 +11,14 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
     const stepsCount = stepComponents?.length;
     const [currentStep, setCurrentStep] = useState<number>(0)
     const [showTour, setShowTour] = useState<boolean>(true)
+
+    useEffect(() => {
+        if(showTour) document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [showTour])
 
     const handleNextStep = useCallback(() => {
         setCurrentStep(prevStep => prevStep + 1);
@@ -26,7 +34,7 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
 
     return (
         <>
-            {showTour && <div className="w-full h-screen flex absolute top-0 justify-center ">
+            {showTour && <div className="w-full h-screen flex fixed z-30 top-0 left-0 justify-center">
                 <div className={modalClassNames}>
                     <div className="flex justify-center">
                         <Stepper count={stepsCount} currentStep={currentStep} />
@@ -39,7 +47,7 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
                         <Button onClick={currentStep === stepsCount - 1 ? handleCloseTour : handleNextStep} label="Continue" type="primary" />
                     </div>
                 </div>
-                <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                <div className="fixed inset-0 z-40 backdrop-blur-md"></div>
             </div>}
         </>
     )

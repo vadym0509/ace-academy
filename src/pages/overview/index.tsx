@@ -1,16 +1,22 @@
-import { TourStepper } from "../../components/tour-stepper"
+import Tour from "./components/tour"
+import { Slider } from "../../components/slider"
+import { Card } from "../../components/slider/slider"
+import AppLayout from "../../layout"
 
 const OverView = () => {
-   const stepComponents = [
-    <h1>123123123</h1>,
-    <h1>sadsad</h1>,
-    <h1>123123asdasd123</h1>,
-    <h1>qweqwe</h1>,
-    <h1>1231qweqw23123</h1>
-   ]
+
+    const cards: Card[] = [
+        {title: "1"},
+        {title: "2"},
+        {title: "3"},
+        {title: "4"}
+    ]
 
     return (
-        <TourStepper stepComponents={stepComponents} />
+        <AppLayout>
+            <Tour />
+            {/* <Slider cards={cards} cardsPerPage={1} /> */}
+        </AppLayout>
     )
 }
 

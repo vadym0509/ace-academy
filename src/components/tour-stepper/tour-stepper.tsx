@@ -10,6 +10,7 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
     const modalClassNames = `p-16 w-131 my-auto justify-center bg-white items-center overflow-x-hidden overflow-y-auto inset-0 z-50 my-auto rounded-2.5xl shadow-custom ${classNames}`;
     const stepsCount = stepComponents?.length;
     const [currentStep, setCurrentStep] = useState<number>(0)
+    const [showTour, setShowTour] = useState<boolean>(true)
 
     const handleNextStep = useCallback(() => {
         setCurrentStep(prevStep => prevStep + 1);
@@ -19,22 +20,28 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
         setCurrentStep(prevStep => prevStep - 1);
     }, [setCurrentStep])
 
+    const handleCloseTour = useCallback(() => {
+        setShowTour(false)
+    }, [showTour, setShowTour])
+
     return (
-        <div className="w-full h-screen flex justify-center ">
-            <div className={modalClassNames}>
-                <div className="flex justify-center">
-                    <Stepper count={stepsCount} currentStep={currentStep} />
+        <>
+            {showTour && <div className="w-full h-screen flex absolute top-0 justify-center ">
+                <div className={modalClassNames}>
+                    <div className="flex justify-center">
+                        <Stepper count={stepsCount} currentStep={currentStep} />
+                    </div>
+                    <div className="mt-16 flex justify-center">
+                        {stepComponents[currentStep]}
+                    </div>
+                    <div className="mt-16 flex justify-center gap-2">
+                        {currentStep !== stepsCount - 1 && <Button disabled={currentStep === 0} onClick={handlePrevStep} label={currentStep === 0 ? "Send again" : "Go back"} />}
+                        <Button onClick={currentStep === stepsCount - 1 ? handleCloseTour : handleNextStep} label="Continue" type="primary" />
+                    </div>
                 </div>
-                <div className="mt-16 flex justify-center">
-                    {stepComponents[currentStep]}
-                </div>
-                <div className="mt-16 flex justify-center gap-2">
-                    <Button disabled={currentStep === 0} onClick={handlePrevStep} label={currentStep === 0 ? "Send again" : "Go back"} />
-                    <Button disabled={currentStep === stepsCount - 1} onClick={handleNextStep} label="Continue" type="primary" />
-                </div>
-            </div>
-            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </div>
+                <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            </div>}
+        </>
     )
 }
 

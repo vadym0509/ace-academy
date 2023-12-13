@@ -9,4 +9,3 @@ const IconGoogle = () => {
 }
 
 export default IconGoogle
-

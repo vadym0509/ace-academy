@@ -7,4 +7,3 @@ const IconMail = () => {
 }
 
 export default IconMail
-

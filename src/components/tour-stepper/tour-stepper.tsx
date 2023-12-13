@@ -49,7 +49,7 @@ const Stepper = ({ count, currentStep }: StepperProps) => {
     return (
         <div className="flex items-center gap-2">
             {steps.map((step) => (
-                <div key={step} className={`rounded-semilg w-15 h-1.5 ${step <= currentStep ? 'bg-primary' : 'bg-tangerine'}`}></div>
+                <div key={step} className={`rounded-semilg w-15 h-1.5 ${step <= currentStep ? 'bg-primary-500' : 'bg-tangerine'}`}></div>
             ))}
         </div>
     );

@@ -9,10 +9,10 @@ interface ButtonProps {
 
 const Button = ({className, type = "default", icon, disabled = false, label, onClick}: ButtonProps) => {
     const types = {
-        default: "bg-white text-midblack border border-black",
-        primary: "bg-primary text-white border border-primary"
+        default: "bg-white text-midblack hover:border-midgrey hover:bg-tangerine border border-black",
+        primary: "bg-primary-500 hover:bg-primary-400 text-white border border-primary-500"
     }
-    let buttonClassName = `px-6.5 h-16 flex rounded-semixl ${types[type]} ${className}`
+    let buttonClassName = `px-6.5 h-16 flex rounded-semixl disabled:cursor-not-allowed disabled:bg-disabled-bg disabled:text-disabled-text disabled:border-disabled-text ${types[type]} ${className}`
     return (
         <button disabled={disabled} onClick={onClick} className={buttonClassName}>
             <div className="w-full flex my-auto">

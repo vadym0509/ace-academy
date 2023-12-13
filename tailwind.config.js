@@ -11,10 +11,18 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#F09272',
+        primary: {
+          500: '#F09272',
+          400: '#f4a286'
+        },
         midblack: '#1F1F1F',
         tangerine: '#F5F5F5',
         midgrey: '#525966',
+        disabled: {
+          bg: '#f0f0f0',
+          text: '#ccc'
+        }
+        
       },
       spacing: {
         1.5: '0.3125rem', //5px

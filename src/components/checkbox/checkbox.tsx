@@ -2,7 +2,7 @@ import { useState } from "react";
 
 interface CheckboxProps {
     className?: string;
-    label: string;
+    label?: string;
 }
 
 const Checkbox = ({className, label}: CheckboxProps) => {

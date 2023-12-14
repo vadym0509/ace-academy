@@ -4,6 +4,7 @@ import ResetPassword from '../pages/auth/reset-password'
 import NewPassword from '../pages/auth/new-password'
 import OverView from '../pages/overview'
 import AllCourses from '../pages/all-courses/all-courses'
+import Admin from '../pages/admin'
 
 const Router = () => {
     return (
@@ -14,6 +15,7 @@ const Router = () => {
             <Route path="/new-password" element={<NewPassword />} />
             <Route path="/overview" element={<OverView />} />
             <Route path="/all-courses" element={<AllCourses />} />
+            <Route path='/admin/*' element={<Admin />} />
         </Routes>
     )
 }

@@ -34,7 +34,7 @@ const TourStepper = ({classNames, stepComponents}: TourStepperProps) => {
 
     return (
         <>
-            {showTour && <div className="w-full h-screen flex fixed z-30 top-0 left-0 justify-center">
+            {showTour && <div className="w-full h-screen flex fixed z-50 top-0 left-0 justify-center">
                 <div className={modalClassNames}>
                     <div className="flex justify-center">
                         <Stepper count={stepsCount} currentStep={currentStep} />

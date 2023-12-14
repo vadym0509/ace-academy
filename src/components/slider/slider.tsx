@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CardData } from '../card/card';
 import Card from '../card/card';
-import { IconLeftArrow, IconRightArrow } from '../../assets/icons';
+import { IconLeftArrow, IconLgRightArrow } from '../../assets/icons';
 
 interface SliderProps {
   className?: string;
@@ -57,7 +57,7 @@ const Slider: React.FC<SliderProps> = ({ cards, cardsPerPage, label, className }
                     onClick={handleNextPage}
                     className="w-9 h-9 absolute -right-12 rounded-full flex bg-white hover:bg-gray-400 active:bg-gray-500 "
                 >
-                <span className='m-auto'><IconRightArrow /></span>
+                <span className='m-auto'><IconLgRightArrow /></span>
                 </button>
             </div>
         </div>

@@ -14,10 +14,15 @@ import IconWhiteHeart from './src/icon-white-heart.tsx'
 import IconGreyHeart from './src/icon-grey-heart.tsx'
 import IconLeftArrow from './src/icon-left-arrow.tsx'
 import IconRightArrow from './src/icon-right-arrow.tsx'
+import IconLgRightArrow from './src/icon-right-arrow-lg.tsx'
 import IconLgDownArrow from './src/icon-down-arrow-lg.tsx'
 import IconSmDownArrow from './src/icon-down-arrow-sm.tsx'
 import IconUpArrow from './src/icon-up-arrow.tsx'
 import IconLanguage from './src/icon-language.tsx'
+import IconUser from './src/icon-user.tsx'
+import IconOk from './src/icon-ok.tsx'
+import IconCancel from './src/icon-cancel.tsx'
+import IconPlus from './src/icon-plus.tsx'
 
 export {
     IconGoogle,
@@ -39,5 +44,10 @@ export {
     IconLgDownArrow,
     IconUpArrow,
     IconLanguage,
-    IconSmDownArrow
+    IconSmDownArrow,
+    IconLgRightArrow,
+    IconUser,
+    IconOk,
+    IconCancel,
+    IconPlus
 }

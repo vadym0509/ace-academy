@@ -24,14 +24,19 @@ export default {
         disabled: {
           bg: '#f0f0f0',
           text: '#ccc'
-        }
+        },
+        semibrightgrey: '#ECECEC',
+        success: '#5BCE00',
+        warning: '#FF3030'
       },
       spacing: {
         0.25: '1px',
+        0.5: '2px',
         1.5: '0.3125rem', // 5px
         1.6: '0.375rem', // 6px
         2.5: '0.625rem', // 10px
         3.25: '0.8125rem', // 13px
+        3.5: '0.875rem', // 14px
         3.75: '0.9375rem', // 15px
         4.5: '1.125rem', // 18px
         6.5: '1.625rem',  // 26px
@@ -47,6 +52,7 @@ export default {
         30: '7.5rem', // 120px
         33: '8.25rem', // 132px
         35: '8.75rem', // 140px
+        39: '9.75rem', // 156px
         66: '16.5rem', // 264px
         75: '18.75rem', // 300px
         77: '19.25rem', // 308px
@@ -62,6 +68,7 @@ export default {
         2.5: '0.625rem', // 10px
         5: '1.25rem', // 20px
         7.5: '1.875rem', // 30px
+        12.5: '3.125rem', // 50px
         15: '3.75rem', //60px
         37.5: '9.375rem' // 150px
       },

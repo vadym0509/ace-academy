@@ -66,7 +66,7 @@ const OptionsPanel = ({img, isAdmin}: OptionsPanelProps) => {
                     <div className="text-sm font-bold text-midgrey">Koppert</div>
                 </div>
             </div>
-            <Button onClick={() => navigate(isAdmin ? '/overview' : '/admin')} label={isAdmin ? "Back to courses" : "Switch to admin"} type="primary" size="md" />
+            <Button onClick={() => navigate(isAdmin ? '/overview' : '/admin/dashboard')} label={isAdmin ? "Back to courses" : "Switch to admin"} type="primary" size="md" />
             <div className="font-bold cursor-pointer">My profile</div>
             <div className="font-bold cursor-pointer">Refer a friend</div>
             <div className="font-bold cursor-pointer">Settings</div>
